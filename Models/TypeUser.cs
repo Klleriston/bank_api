@@ -1,5 +1,5 @@
 public enum TypeUser 
 {
     Individual,
-    LeaglEntity
+    LegalEntity
 }
