@@ -13,6 +13,8 @@ public class Startup
         services.AddDbContext<DatabaseBank>(options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
         services.AddControllers();
+        services.AddScoped<IUserRepository, UserRepository>();
+
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

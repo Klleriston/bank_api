@@ -89,6 +89,7 @@ C:\Users\klleriston_calriz\Desktop\bank_api\obj\Debug\net8.0\bank_api.AssemblyIn
 C:\Users\klleriston_calriz\Desktop\bank_api\obj\Debug\net8.0\bank_api.csproj.CoreCompileInputs.cache
 C:\Users\klleriston_calriz\Desktop\bank_api\obj\Debug\net8.0\bank_api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\klleriston_calriz\Desktop\bank_api\obj\Debug\net8.0\bank_api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\klleriston_calriz\Desktop\bank_api\obj\Debug\net8.0\bank_api.sourcelink.json
 C:\Users\klleriston_calriz\Desktop\bank_api\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\klleriston_calriz\Desktop\bank_api\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\klleriston_calriz\Desktop\bank_api\obj\Debug\net8.0\staticwebassets\msbuild.bank_api.Microsoft.AspNetCore.StaticWebAssets.props
