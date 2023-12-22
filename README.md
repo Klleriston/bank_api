@@ -11,9 +11,7 @@ This API is designed to handle various banking operations, catering to both indi
 
 ## Features
 
-- **User Management:** Create, update, and delete individual and legal user profiles.
-- **Transaction Handling:** Support for various banking transactions such as deposits, withdrawals, and transfers.
-- **Scalability:** Designed with scalability in mind to handle a growing user base.
+🚧
 
 ## Database Configuration
 
