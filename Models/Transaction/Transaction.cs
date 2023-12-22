@@ -11,4 +11,5 @@ public class Transaction
     
     [ForeignKey("ReceiverId")]
     public User? Receiver { get; set; }
+    public DateTime timestamp;
 }
