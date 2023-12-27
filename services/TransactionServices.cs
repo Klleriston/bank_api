@@ -30,45 +30,45 @@ public class TransactionServices
         }
 
         Transaction newTransaction = new Transaction
-    {
-        Amount = transaction.value,
-        Sender = sender,
-        Receiver = receiver,
-        timestamp = DateTime.Now
-    };
-
-    sender.UpdateBalance(sender.Balance - transaction.value);
-    receiver.UpdateBalance(receiver.Balance + transaction.value);
-
-    Repository.Update(newTransaction);
-    userServices.AddU(sender);
-    userServices.AddU(receiver);
-
-    return newTransaction;
-        
-    }
-
-   private async Task<bool> AuthorizeTransaction(User sender, decimal amount)
-{
-    try
-    {
-        HttpResponseMessage response = await httpClient.GetAsync("https://run.mocky.io/v3/5794d450-d2e2-4412-8131-73d0293ac1cc");
-
-        if (response.StatusCode == HttpStatusCode.OK)
         {
-            var content = await response.Content.ReadAsStringAsync();
-            dynamic responseJson = JsonConvert.DeserializeObject(content)!;
-            string message = responseJson["message"];
-            return "Autorizado".Equals(message, StringComparison.OrdinalIgnoreCase);
-        }
-        return false;
+            Amount = transaction.value,
+            Sender = sender,
+            Receiver = receiver,
+            timestamp = DateTime.Now
+        };
+
+        sender.UpdateBalance(sender.Balance - transaction.value);
+        receiver.UpdateBalance(receiver.Balance + transaction.value);
+
+        Repository.Update(newTransaction);
+        userServices.AddU(sender);
+        userServices.AddU(receiver);
+
+        return newTransaction;
+
     }
-    catch (Exception ex)
+
+    private async Task<bool> AuthorizeTransaction(User sender, decimal amount)
     {
-        Console.WriteLine($"Erro na chamada da API de autorização: {ex.Message}");
-        return false;
+        try
+        {
+            HttpResponseMessage response = await httpClient.GetAsync("https://run.mocky.io/v3/5794d450-d2e2-4412-8131-73d0293ac1cc");
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                dynamic responseJson = JsonConvert.DeserializeObject(content)!;
+                string message = responseJson["message"];
+                return "Autorizado".Equals(message, StringComparison.OrdinalIgnoreCase);
+            }
+            return false;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro na chamada da API de autorização: {ex.Message}");
+            return false;
+        }
     }
-}
 
 
 }
