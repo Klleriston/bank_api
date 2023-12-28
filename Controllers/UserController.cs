@@ -3,7 +3,7 @@
 namespace bank_api;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("/[controller]")]
 public class UserController : ControllerBase
 {
     private readonly DatabaseBank _context;

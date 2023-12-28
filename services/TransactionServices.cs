@@ -7,13 +7,15 @@ public class TransactionServices
     private readonly UserServices userServices;
     private readonly ITransactionRepository Repository;
     private readonly HttpClient httpClient;
+    
 
     public TransactionServices(ITransactionRepository repository, UserServices userServices)
-    {
-        Repository = repository;
-        this.userServices = userServices;
-        httpClient = new HttpClient();
-    }
+{
+    Repository = repository;
+    this.userServices = userServices;
+    httpClient = new HttpClient();
+}
+
 
     public async Task<Transaction> CreateTransaction(TransactionDTO transaction)
     {
@@ -43,7 +45,7 @@ public class TransactionServices
         Repository.Update(newTransaction);
         userServices.AddU(sender);
         userServices.AddU(receiver);
-
+        
         return newTransaction;
 
     }

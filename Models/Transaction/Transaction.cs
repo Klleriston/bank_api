@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 public class Transaction
 {
@@ -7,9 +8,11 @@ public class Transaction
     public int SenderId { get; set; }
     public int ReceiverId { get; set; }
     [ForeignKey("SenderId")]
-    public User? Sender { get; set; }
+    public User Sender { get; set; }
     
     [ForeignKey("ReceiverId")]
-    public User? Receiver { get; set; }
+    public User Receiver { get; set; }
     public DateTime timestamp;
+    [JsonIgnore]
+    public ICollection<Transaction> TransactionsSent { get; set; }
 }

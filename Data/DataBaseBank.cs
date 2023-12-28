@@ -13,11 +13,13 @@ public class DatabaseBank : DbContext
         modelBuilder.Entity<User>()
             .HasMany(u => u.TransactionsSent)
             .WithOne(t => t.Sender)
-            .HasForeignKey(t => t.SenderId);
+            .HasForeignKey(t => t.SenderId)
+            .OnDelete(DeleteBehavior.Cascade);
 
         modelBuilder.Entity<User>()
             .HasMany(u => u.TransactionsReceived)
             .WithOne(t => t.Receiver)
-            .HasForeignKey(t => t.ReceiverId);
+            .HasForeignKey(t => t.ReceiverId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

@@ -1,6 +1,6 @@
 public interface ITransactionRepository
 {
-    void Save(Transaction transaction);
+    void Add(Transaction transaction);
     void Update(Transaction transaction);
     Transaction GetById(int transactionId);
     IEnumerable<Transaction> GetAll();
@@ -15,7 +15,7 @@ public class TransactionRepository : ITransactionRepository
         _context = context;
     }
 
-    public void Save(Transaction transaction)
+    public void Add(Transaction transaction)
     {
         _context.Transactions.Add(transaction);
         _context.SaveChanges();
