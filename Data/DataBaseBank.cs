@@ -5,10 +5,10 @@ public class DatabaseBank : DbContext
     public DatabaseBank(DbContextOptions<DatabaseBank> options) : base(options)
     {
     }
-    public DbSet<User> Users {get; set;}
-    public DbSet<Transaction> Transactions {get; set;}
+    public DbSet<User> Users { get; set; }
+    public DbSet<Transaction> Transactions { get; set; }
 
-     protected override void OnModelCreating(ModelBuilder modelBuilder)
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<User>()
             .HasMany(u => u.TransactionsSent)

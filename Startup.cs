@@ -15,14 +15,14 @@ public class Startup
     {
         options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
     });
-    
+
         services.AddDbContext<DatabaseBank>(options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
         services.AddControllers();
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<TransactionServices>();
-services.AddScoped<ITransactionRepository, TransactionRepository>();
-services.AddScoped<UserServices>();
+        services.AddScoped<ITransactionRepository, TransactionRepository>();
+        services.AddScoped<UserServices>();
 
     }
 

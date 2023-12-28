@@ -33,7 +33,7 @@ public class TransactionController : ControllerBase
     {
         var deletedTransaction = _context.Transactions.Find(id);
 
-        if (deletedTransaction == null) 
+        if (deletedTransaction == null)
         {
             return NotFound();
         }
@@ -41,6 +41,6 @@ public class TransactionController : ControllerBase
         _context.Transactions.Remove(deletedTransaction);
         _context.SaveChanges();
         return NoContent();
-        
+
     }
 }

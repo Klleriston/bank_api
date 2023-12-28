@@ -1,4 +1,4 @@
-public class User 
+public class User
 {
     public int Id { get; private set; }
     public string FirstName { get; private set; }
@@ -9,10 +9,10 @@ public class User
     public string Password { get; private set; }
     public decimal Balance { get; private set; }
 
-      public ICollection<Transaction> TransactionsSent { get; set; } = new List<Transaction>();
+    public ICollection<Transaction> TransactionsSent { get; set; } = new List<Transaction>();
     public ICollection<Transaction> TransactionsReceived { get; set; } = new List<Transaction>();
-    
-    public User(int id, string firstName, string lastName, TypeUser type,string document, string email, string password, decimal balance)
+
+    public User(int id, string firstName, string lastName, TypeUser type, string document, string email, string password, decimal balance)
     {
         Id = id;
         FirstName = firstName;

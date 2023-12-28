@@ -9,7 +9,7 @@ public class Transaction
     public int ReceiverId { get; set; }
     [ForeignKey("SenderId")]
     public User Sender { get; set; }
-    
+
     [ForeignKey("ReceiverId")]
     public User Receiver { get; set; }
     public DateTime timestamp;

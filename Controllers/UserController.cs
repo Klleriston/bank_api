@@ -40,7 +40,7 @@ public class UserController : ControllerBase
     {
         var deletedUser = _context.Users.Find(id);
 
-        if (deletedUser == null) 
+        if (deletedUser == null)
         {
             return NotFound();
         }
@@ -48,6 +48,6 @@ public class UserController : ControllerBase
         _context.Users.Remove(deletedUser);
         _context.SaveChanges();
         return NoContent();
-        
+
     }
 }

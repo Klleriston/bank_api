@@ -1,4 +1,4 @@
-public enum TypeUser 
+public enum TypeUser
 {
     Individual,
     LegalEntity
