@@ -2844,11 +2844,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\klleriston_calriz\\bank_api\\bank_api.csproj",
+      "projectUniqueName": "C:\\Users\\klleriston_calriz\\Desktop\\bank_api\\bank_api.csproj",
       "projectName": "bank_api",
-      "projectPath": "C:\\Users\\klleriston_calriz\\bank_api\\bank_api.csproj",
+      "projectPath": "C:\\Users\\klleriston_calriz\\Desktop\\bank_api\\bank_api.csproj",
       "packagesPath": "C:\\Users\\klleriston_calriz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\klleriston_calriz\\bank_api\\obj\\",
+      "outputPath": "C:\\Users\\klleriston_calriz\\Desktop\\bank_api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\klleriston_calriz\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -2857,7 +2857,8 @@
         "net8.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.nuget.org/api/v2": {}
       },
       "frameworks": {
         "net8.0": {
